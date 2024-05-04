@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-04T07:12:05.071Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="cAdgiypxB8NxJB_aWX-y" version="24.3.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-05-04T08:46:51.165Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Z92bqhsj0W-SgOTy4b1W" version="24.3.1" type="github" pages="3">
   <diagram id="T1VDqFvA3Pbn5BaJYuLr" name="分片上传">
     <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -31,7 +31,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="https">
-    <mxGraphModel dx="1050" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -62,6 +62,77 @@
         </mxCell>
         <mxCell id="I-eei9kPtDWw9Z9nhV4N-10" value="" style="image;html=1;image=img/lib/clip_art/computers/iMac_128x128.png" vertex="1" parent="1">
           <mxGeometry x="70" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2-vPYPPSY-f7j2bodday" name="视频服架构">
+    <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Av2a6vU6USJQgbzDukHS-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="190" width="370" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-3" value="公网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-1" target="Av2a6vU6USJQgbzDukHS-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-1" value="" style="image;html=1;image=img/lib/clip_art/computers/MacBook_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-7" value="nginx正向代理" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-2" target="Av2a6vU6USJQgbzDukHS-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-2" value="zpvideo.duoyi,com" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="170" y="220" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-10" value="根据域名转发" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-6" target="Av2a6vU6USJQgbzDukHS-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-6" value="公共代理" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="380" y="220" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-14" value="发布转码事件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-9" target="Av2a6vU6USJQgbzDukHS-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-9" value="广州外网" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="580" y="220" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-16" value="监听消费" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-11" target="Av2a6vU6USJQgbzDukHS-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-11" value="rabbitMQ" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="580" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-13" value="获取源文件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-12" target="Av2a6vU6USJQgbzDukHS-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-12" value="rsyncServer" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="780" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-17" value="获取文件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-15" target="Av2a6vU6USJQgbzDukHS-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-20" value="文件持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-15" target="Av2a6vU6USJQgbzDukHS-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-15" value="广州外网" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="580" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-18" value="视频转码" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Av2a6vU6USJQgbzDukHS-15" target="Av2a6vU6USJQgbzDukHS-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="700" />
+              <mxPoint x="580" y="700" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-19" value="外部oss" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="350" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Av2a6vU6USJQgbzDukHS-22" value="&lt;b&gt;上传站点&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="685" y="200" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
